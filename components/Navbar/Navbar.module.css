@@ -1,0 +1,99 @@
+.navbar {
+  color: #fff;
+  width: -webkit-fill-available;
+  z-index: 100;
+}
+
+.navHeader {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  width: inherit;
+}
+
+.navHeader h1 {
+  font-size: 1.5rem;
+}
+
+.openButton {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.3rem;
+}
+
+.overlay {
+  background: #fff;
+  border: 1px solid green;
+  height: 100vh;
+  left: 0;
+  opacity: 0;
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  transform: translateY(100%);
+  width: inherit;
+  z-index: 999;
+
+  transition:
+    transform 0.7s cubic-bezier(0.62, 0.05, 0.01, 0.99),
+    opacity 0.3s ease;
+}
+
+.overlayHeader {
+  color: #000;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  position: absolute;
+  top: 0;
+  width: inherit;
+}
+
+.overlayHeader h1 {
+  font-size: 1.5rem;
+}
+
+.closeButton {
+  background: none;
+  border: none;
+  font-size: 1.3rem;
+}
+
+.overlayContent {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: inherit;
+  justify-content: center;
+}
+
+.overlay.open {
+  font-size: 1.3rem;
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.overlay.fadeOut {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(0);
+  transition: opacity 0.35s ease;
+}
+
+.menuList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menuList li {
+  margin: 20px 0;
+}
+
+.menuList li a {
+  color: #000;
+  font-size: 2rem;
+  text-decoration: none;
+}
