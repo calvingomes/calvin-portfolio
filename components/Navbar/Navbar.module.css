@@ -23,8 +23,7 @@
 }
 
 .overlay {
-  background: #fff;
-  border: 1px solid green;
+  background: var(--dark-teal);
   height: 100vh;
   left: 0;
   opacity: 0;
@@ -41,12 +40,14 @@
 }
 
 .overlayHeader {
-  color: #000;
+  color: #fff;
   display: flex;
   justify-content: space-between;
+  opacity: 0;
   padding: 20px;
   position: absolute;
   top: 0;
+  transition: opacity 0.4s ease;
   width: inherit;
 }
 
@@ -57,15 +58,19 @@
 .closeButton {
   background: none;
   border: none;
+  color: #fff;
   font-size: 1.3rem;
 }
 
 .overlayContent {
-  align-items: center;
+  align-items: flex-start;
   display: flex;
   flex-direction: column;
-  height: inherit;
-  justify-content: center;
+  height: -webkit-fill-available;
+  justify-content: flex-end;
+  opacity: 0;
+  padding: 20px;
+  transition: opacity 0.8s ease;
 }
 
 .overlay.open {
@@ -73,6 +78,16 @@
   opacity: 1;
   pointer-events: auto;
   transform: translateY(0);
+}
+
+.overlay.open .overlayHeader {
+  opacity: 1;
+  transition-delay: 0.6s;
+}
+
+.overlay.open .overlayContent {
+  opacity: 1;
+  transition-delay: 0.8s;
 }
 
 .overlay.fadeOut {
@@ -89,11 +104,17 @@
 }
 
 .menuList li {
+  line-height: 45px;
   margin: 20px 0;
 }
 
 .menuList li a {
-  color: #000;
-  font-size: 2rem;
+  color: #fff;
+  font-size: 4rem;
   text-decoration: none;
+}
+
+.menuList li .active {
+  text-decoration: underline;
+  text-underline-offset: 12px;
 }

@@ -1,17 +1,5 @@
-// import Image from "next/image";
-
 export default function Home() {
   return (
-    <div>
-      This is the home page
-      {/* <Image
-        className="dark:invert"
-        src="/next.svg"
-        alt="Next.js logo"
-        width={100}
-        height={20}
-        priority
-      /> */}
-    </div>
+    <h1>Hello, this is the about page</h1>
   );
 }

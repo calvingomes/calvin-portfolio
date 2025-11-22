@@ -1,10 +1,13 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { usePathname } from "next/navigation";
 import styles from "./Navbar.module.css";
 import Link from "next/link";
 
 export default function Navbar() {
+  const pathname = usePathname();
+  
   const [open, setOpen] = useState(false);
   const [fadeOut, setFadeOut] = useState(false);
 
@@ -60,12 +63,14 @@ export default function Navbar() {
 
         <div className={styles.overlayContent}>
           <ul className={styles.menuList}>
-            <li><Link className={styles.active} href="/">Home</Link></li>
-            <li><Link href="/about">About</Link></li>
-            <li><Link href="/experience">Experience</Link></li>
-            <li><Link href="/projects">Projects</Link></li>
-            <li><Link href="/contact">Contact</Link></li>
+            <li><Link className={pathname === "/" ? styles.active : ""} href="/">Home</Link></li>
+            <li><Link className={pathname === "/about" ? styles.active : ""} href="/about">About</Link></li>
+            <li><Link className={pathname === "/experience" ? styles.active : ""} href="/experience">Experience</Link></li>
+            <li><Link className={pathname === "/projects" ? styles.active : ""} href="/projects">Projects</Link></li>
+            <li><Link className={pathname === "/contact" ? styles.active : ""} href="/contact">Contact</Link></li>
           </ul>
+          <p>Frontend Developer <br/>at Bolser</p>
+          <p>Currenly based at <br/>Chennai, India</p>
         </div>
       </div>
     </nav>
