@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -21,14 +21,15 @@ export const metadata: Metadata = {
   title: "Calvin Gomes",
   description: "Portfolio",
 
-  themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#e1dfdd" },
-    { media: "(prefers-color-scheme: dark)", color: "#e1dfdd" }
-  ],
   appleWebApp: {
     statusBarStyle: "black-translucent",
   },
 };
+
+export const viewport: Viewport = {
+  themeColor: '#e1dfdd',
+  colorScheme: 'light',
+}
 
 export default function RootLayout({
   children,
