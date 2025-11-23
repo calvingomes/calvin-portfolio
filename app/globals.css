@@ -7,7 +7,7 @@
   --black: #000;
   --white: #fff;
   --title-1: 56px;
-  --title-2: 20px;
+  --title-2: 40px;
   --title-3: 30px;
   --title-4: 20px;
   --paragraph-text: 20px;
@@ -40,6 +40,7 @@
 
 html {
   background: var(--light-grey);
+  background: var(--light-grey);
 }
 
 body {
@@ -48,10 +49,10 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
   padding: 0;
-  min-height: 100vh;
+  min-height: 100dvh;
 }
 
 body.menu-open {
   overflow: hidden;
-  height: 100vh;
+  height: 100dvh;
 }
