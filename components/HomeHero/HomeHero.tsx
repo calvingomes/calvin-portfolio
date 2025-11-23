@@ -8,14 +8,23 @@ export default function HomeHero() {
       <h2 className={styles.heroTitle}>Frontend Developer</h2>
       <Image
         src="https://placehold.jp/320x290.png"
-        width={320}
         height={290}
+        width={320}
         alt="Picture of the author"
-        className={styles.heroPic}
+        className={styles.heroPicMobile}
       />
-      {/* <div className={styles.heroNameContainer}> */}
+
+      <Image
+        src="https://placehold.jp/720x260.png"
+        height={260}
+        width={720}
+        alt="Picture of the author"
+        className={styles.heroPicDesktop}
+      />
+
+      <div className={styles.heroNameContainer}>
         <h2 className={styles.heroName}>Calvin Gomes</h2>
-      {/* </div> */}
+      </div>
     </div>
   )
 }
