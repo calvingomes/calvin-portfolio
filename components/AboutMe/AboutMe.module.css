@@ -1,0 +1,80 @@
+.aboutMeMobile {
+  margin-bottom: 70px;
+}
+
+.aboutMeDesktop {
+  display: none;
+}
+
+.aboutMeMobile .aboutMeContent1,
+.aboutMeMobile .aboutMeContent2 {
+  text-transform: uppercase;
+  font-size: var(--lg-paragraph-text);
+  font-weight: 500;
+  margin: 0;
+}
+
+.aboutMeMobile .aboutMeContent1 {
+  margin-bottom: 25px;
+}
+
+.aboutMeMobile .aboutMeContent2 {
+  margin-bottom: 45px;
+}
+
+.aboutMeMobile .aboutMeContent3 {
+  font-size: var(--paragraph-text);
+  font-weight: 500;
+}
+
+@media screen and (min-width: 1400px) {
+  .aboutMeMobile {
+    display: none;
+  }
+
+  .aboutMeDesktop {
+    display: flex;
+    justify-content: space-between;
+    /* min-height: 70dvh; */
+    margin-bottom: 200px;
+  }
+
+  .desktopLeftContent {
+    padding-right: 360px;
+  }
+
+  .desktopLeftContent p {
+    margin: 0;
+    font-size: var(--paragraph-text);
+    font-weight: 400;
+  }
+
+  .desktopRightContent {
+    padding-right: 250px;
+  }
+
+  .desktopRightContent .aboutMeContent1,
+  .desktopRightContent .aboutMeContent2 {
+    margin: 0 0 40px 0;
+    text-transform: uppercase;
+    font-size: var(--title-desktop-2);
+    line-height: 45px;
+    letter-spacing: -3px;
+    font-weight: 400; 
+    max-width: 1200px;
+  }
+
+  .desktopRightContent .aboutMeContent2 {
+    margin: 0 0 70px 0;
+  }
+
+  .desktopRightContent .aboutMeContent3 {
+    margin: 0;
+    padding-left: calc(15vw + 80px);
+    font-size: var(--lg-paragraph-text);
+    line-height: 32px;
+    letter-spacing: -1px;
+    font-weight: 400;
+    max-width: 800px;
+  }
+}
