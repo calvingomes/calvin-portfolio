@@ -71,7 +71,7 @@ export default function Navbar() {
           <span><Link className={pathname === "/experience" ? styles.active : ""} href="/experience">Experience</Link></span>
           <span><Link className={pathname === "/projects" ? styles.active : ""} href="/projects">Projects</Link></span>
           <span><Link className={pathname === "/contact" ? styles.active : ""} href="/contact">Contact</Link></span>
-          <span><Link href="/">Resume</Link></span>
+          <span><Link href="/calvin-resume.pdf" download>Resume</Link></span>
         </div>
         <button
           className={styles.openButton}
@@ -109,7 +109,7 @@ export default function Navbar() {
             <li><Link className={pathname === "/experience" ? styles.active : ""} href="/experience">Experience</Link></li>
             <li><Link className={pathname === "/projects" ? styles.active : ""} href="/projects">Projects</Link></li>
             <li><Link className={pathname === "/contact" ? styles.active : ""} href="/contact">Contact</Link></li>
-            <li><Link href="/">Resume</Link></li>
+            <li><Link href="/calvin-resume.pdf" download>Resume</Link></li>
           </ul>
           <div className={styles.footer}>
             <p>Frontend Developer at Bolser</p>
