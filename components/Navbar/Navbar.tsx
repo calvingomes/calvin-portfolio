@@ -67,7 +67,7 @@ export default function Navbar() {
         <p className={`${styles.navDescriptionDesktop} fadeOnScroll`}>Frontend Developer at <a href="https://bolser.co.uk/" target="_blank">Bolser</a></p>
         <p className={`${styles.navDescriptionDesktop} fadeOnScroll`}>Currenly based in Chennai, India</p>
         <div className={styles.menuItemsDesktop}>
-          <span><Link className={pathname === "/about" ? styles.active : ""} href="/about">About</Link></span>
+          {/* <span><Link className={pathname === "/about" ? styles.active : ""} href="/about">About</Link></span> */}
           <span><Link className={pathname === "/experience" ? styles.active : ""} href="/experience">Experience</Link></span>
           <span><Link className={pathname === "/projects" ? styles.active : ""} href="/projects">Projects</Link></span>
           <span><Link className={pathname === "/contact" ? styles.active : ""} href="/contact">Contact</Link></span>
@@ -105,7 +105,7 @@ export default function Navbar() {
         <div className={styles.overlayContent}>
           <ul className={styles.menuList}>
             <li><Link className={pathname === "/" ? styles.active : ""} href="/">Home</Link></li>
-            <li><Link className={pathname === "/about" ? styles.active : ""} href="/about">About</Link></li>
+            {/* <li><Link className={pathname === "/about" ? styles.active : ""} href="/about">About</Link></li> */}
             <li><Link className={pathname === "/experience" ? styles.active : ""} href="/experience">Experience</Link></li>
             <li><Link className={pathname === "/projects" ? styles.active : ""} href="/projects">Projects</Link></li>
             <li><Link className={pathname === "/contact" ? styles.active : ""} href="/contact">Contact</Link></li>
