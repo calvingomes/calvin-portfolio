@@ -1,30 +1,53 @@
 /* @import "tailwindcss"; */
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
   --dark-teal: #464c47;
+  --light-grey: #e1dfdd;
+  --light-yellow: #fffbc8;
+  --black: #000;
+  --white: #fff;
+  --title-1: 56px;
+  --title-2: 20px;
+  --title-3: 30px;
+  --title-4: 20px;
+  --paragraph-text: 20px;
+  --primary-curve: cubic-bezier(0.62, 0.05, 0.01, 0.99);
+
+  /* --header-height: 90px;
+  --modal-header-height: 75px;
+  --layout-top-padding: 40px;
+  --layout-horizontal-padding: 20px;
+  --section-vertical-padding: 100px;
+  --page-hero-padding-top: 132px;
+  --send-message-padding: 104px 0 162px;
+  --full-screen-gutters: 90px;
+  --cursor-dimension: 124px;
+  --scene-max-height: 850px;
+  --main-color: var(--black);
+  --transparent-white: hsla(0, 0%, 100%, 0.423);
+  --lg-paragraph-text: 30px;
+  --lg-description-text: 32px;
+  --accordion-item-number: 20px;
+  --mobile-click-area-text: 22px;
+  --base-scale3d: scale3d(1, 1, 1);
+  --base-translate3d: translate3d(0, 0, 0); */
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
-  background: var(--background);
-  color: var(--foreground);
+  background: var(--light-grey);
+  color: var(--black);
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
   padding: 0;
   min-height: 100vh;
+}
+
+body.menu-open {
+  overflow: hidden;
+  height: 100vh;
 }
