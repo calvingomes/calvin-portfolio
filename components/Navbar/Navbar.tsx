@@ -41,7 +41,9 @@ export default function Navbar() {
   return (
     <nav className={styles.navbar}>
       <div className={styles.navHeader}>
-        <h1>Calvin Gomes</h1>
+        <span>
+          <Link className={styles.navTitle} href="/">Calvin Gomes</Link>
+        </span>
         <button
           className={styles.openButton}
           onClick={() => setOpen(true)}
@@ -59,7 +61,9 @@ export default function Navbar() {
         `}
       >
         <div className={styles.overlayHeader}>
-          <h1>Calvin Gomes</h1>
+          <span>
+            <Link className={styles.overlayTitle} href="/">Calvin Gomes</Link>
+          </span>
           <button
             className={styles.closeButton}
             onClick={closeMenu}

@@ -1,24 +1,12 @@
 .navbar {
-  width: -webkit-fill-available;
+  position: sticky;
+  top: 0;
+  padding: 32px 20px;
 }
 
 .navHeader {
   display: flex;
   justify-content: space-between;
-  padding: 20px;
-  width: inherit;
-}
-
-.navHeader h1 {
-  font-size: var(--title-3);
-}
-
-.openButton {
-  background: none;
-  border: none;
-  font-size: var(--title-4);
-  cursor: pointer;
-  color: var(--black);
 }
 
 .overlay {
@@ -27,13 +15,15 @@
   opacity: 0;
   position: fixed;
   transform: translateY(100%);
-  inset: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   z-index: 999;
   overflow-y: auto;
   overscroll-behavior: contain;
   display: flex;
   flex-direction: column;
-
   transition:
     transform 0.7s var(--primary-curve),
     opacity 0.3s ease;
@@ -44,21 +34,35 @@
   display: flex;
   justify-content: space-between;
   opacity: 0;
-  padding: 20px;
+  padding: 32px 20px;
   transition: opacity 0.4s ease;
-  width: inherit;
 }
 
-.overlayHeader h1 {
+.navTitle,
+.overlayTitle {
   font-size: var(--title-3);
+  font-weight: 400;
+  letter-spacing: -1.5px;
+  color: var(--black);
+  text-decoration: none;
 }
 
+.overlayTitle {
+  color: var(--white);
+}
+
+.openButton,
 .closeButton {
   background: none;
   border: none;
-  color: var(--white);
   font-size: var(--title-4);
   cursor: pointer;
+  color: var(--black);
+  padding: 0;
+}
+
+.closeButton {
+  color: var(--white);
 }
 
 .overlayContent {
@@ -106,6 +110,8 @@
 .menuList li {
   line-height: 35px;
   margin: 0 0 20px 0;
+  text-transform: uppercase;
+  letter-spacing: -0.1em;
 }
 
 .menuList li a {
@@ -123,7 +129,7 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
-  max-width: 50%;
+  max-width: 55%;
 }
 
 .overlayContent p {

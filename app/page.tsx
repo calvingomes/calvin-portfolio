@@ -1,7 +1,10 @@
+import styles from "./page.module.css";
 import HomeHero from "@/components/HomeHero/HomeHero";
 
 export default function Home() {
   return (
-    <HomeHero />
+    <div className={styles.appContainer}>
+      <HomeHero />
+    </div>
   );
 }
