@@ -21,8 +21,10 @@ export const metadata: Metadata = {
   title: "Calvin Gomes",
   description: "Portfolio",
 
-  themeColor: "#e1dfdd",
-
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#e1dfdd" },
+    { media: "(prefers-color-scheme: dark)", color: "#e1dfdd" }
+  ],
   appleWebApp: {
     statusBarStyle: "black-translucent",
   },
