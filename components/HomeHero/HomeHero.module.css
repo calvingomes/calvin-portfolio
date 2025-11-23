@@ -1,0 +1,32 @@
+.homeHero {
+  background-color: var(--light-grey);
+  height: inherit;
+  margin-top: 70px;
+}
+
+.heroDescription {
+  text-transform: uppercase;
+  font-size: var(--paragraph-text);
+  margin: 0 0 30px 0;
+  max-width: 65vw;
+}
+
+.heroPic {
+  margin: 0 0 20px 0;
+}
+
+.heroTitle {
+  text-transform: uppercase;
+  font-size: var(--title-1);
+  margin: 0 0 25px 0;
+  line-height: calc(var(--title-1) - 4px);
+}
+
+.heroName {
+  text-transform: uppercase;
+  font-size: var(--title-1);
+  line-height: calc(var(--title-1) - 4px);
+  margin: 0;
+  text-align: right;
+  margin: 20px 0;
+}
