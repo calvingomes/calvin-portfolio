@@ -1,12 +1,21 @@
 .navbar {
   position: sticky;
+  background-color: var(--light-grey);
   top: 0;
   padding: 32px 20px;
+}
+
+.navDescriptionDesktop {
+  display: none;
 }
 
 .navHeader {
   display: flex;
   justify-content: space-between;
+}
+
+.menuItemsDesktop {
+  display: none;
 }
 
 .overlay {
@@ -136,4 +145,65 @@
   margin: 0;
   font-size: var(--paragraph-text);
   color: var(--white);
+}
+
+@media screen and (min-width: 1400px) {
+
+  .navbar {
+    padding: 32px 70px;
+  }
+
+  .openButton {
+    display: none;
+  }
+
+  .overlay {
+    display: none;
+  }
+
+  .navHeader {
+    align-items: stretch;
+  }
+
+  .navTitle {
+    font-weight: 600;
+    font-size: var(--title-desktop-3);
+  }
+
+  .navDescriptionDesktop {
+    display: block;
+    position: static;
+    max-width: 225px;
+    margin: 0;
+    font-weight: 600;
+    font-size: var(--paragraph-desktop-text);
+  }
+
+  .navDescriptionDesktop a {
+    color: inherit;
+  }
+
+  .fadeOnScroll {
+    transition: opacity 0.3s ease;
+  }
+
+  .menuItemsDesktop {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  .menuItemsDesktop a {
+    font-size: var(--title-3);
+    color: var(--black);
+    text-decoration: none;
+
+    font-weight: 600;
+    font-size: var(--paragraph-desktop-text);
+  }
+
+  .menuItemsDesktop .active {
+    text-decoration: underline;
+    text-underline-offset: 6px;
+  }
 }

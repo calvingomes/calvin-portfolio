@@ -37,13 +37,42 @@ export default function Navbar() {
       document.body.classList.remove("menu-open");
     }
   }, [open]);
-  
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrolled = window.scrollY;
+      const threshold = 120;
+
+      const opacity = Math.max(0, 1 - scrolled / threshold);
+
+      const els = document.querySelectorAll(".fadeOnScroll");
+      els.forEach((el) => {
+        const element = el as HTMLElement;
+
+        element.style.opacity = opacity.toString();
+        element.style.visibility = opacity === 0 ? "hidden" : "visible";
+      });
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <nav className={styles.navbar}>
       <div className={styles.navHeader}>
         <span>
           <Link className={styles.navTitle} href="/">Calvin Gomes</Link>
         </span>
+        <p className={`${styles.navDescriptionDesktop} fadeOnScroll`}>Frontend Developer at <a href="https://bolser.co.uk/" target="_blank">Bolser</a></p>
+        <p className={`${styles.navDescriptionDesktop} fadeOnScroll`}>Currenly based in Chennai, India</p>
+        <div className={styles.menuItemsDesktop}>
+          <span><Link className={pathname === "/about" ? styles.active : ""} href="/about">About</Link></span>
+          <span><Link className={pathname === "/experience" ? styles.active : ""} href="/experience">Experience</Link></span>
+          <span><Link className={pathname === "/projects" ? styles.active : ""} href="/projects">Projects</Link></span>
+          <span><Link className={pathname === "/contact" ? styles.active : ""} href="/contact">Contact</Link></span>
+          <span><Link href="/">Resume</Link></span>
+        </div>
         <button
           className={styles.openButton}
           onClick={() => setOpen(true)}
@@ -80,6 +109,7 @@ export default function Navbar() {
             <li><Link className={pathname === "/experience" ? styles.active : ""} href="/experience">Experience</Link></li>
             <li><Link className={pathname === "/projects" ? styles.active : ""} href="/projects">Projects</Link></li>
             <li><Link className={pathname === "/contact" ? styles.active : ""} href="/contact">Contact</Link></li>
+            <li><Link href="/">Resume</Link></li>
           </ul>
           <div className={styles.footer}>
             <p>Frontend Developer at Bolser</p>

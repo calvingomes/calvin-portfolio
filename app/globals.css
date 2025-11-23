@@ -6,12 +6,18 @@
   --light-yellow: #fffbc8;
   --black: #000;
   --white: #fff;
+  --primary-curve: cubic-bezier(0.62, 0.05, 0.01, 0.99);
   --title-1: 56px;
   --title-2: 40px;
   --title-3: 30px;
   --title-4: 20px;
   --paragraph-text: 20px;
-  --primary-curve: cubic-bezier(0.62, 0.05, 0.01, 0.99);
+
+  --title-desktop-1: 124px;
+  --title-desktop-2: 40px;
+  --title-desktop-3: 30px;
+  --title-desktop-4: 22px;
+  --paragraph-desktop-text: 22px;
 
   /* --header-height: 90px;
   --modal-header-height: 75px;
