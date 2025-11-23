@@ -1,7 +1,5 @@
 .navbar {
-  color: #fff;
   width: -webkit-fill-available;
-  z-index: 100;
 }
 
 .navHeader {
@@ -18,37 +16,36 @@
 .openButton {
   background: none;
   border: none;
-  color: #fff;
   font-size: 1.3rem;
+  cursor: pointer;
 }
 
 .overlay {
   background: var(--dark-teal);
-  height: 100vh;
+  min-height: 100svh;
   left: 0;
   opacity: 0;
-  pointer-events: none;
   position: fixed;
   top: 0;
   transform: translateY(100%);
-  width: inherit;
+  inset: 0;
   z-index: 999;
-  padding-top: env(safe-area-inset-top);
-  padding-bottom: env(safe-area-inset-bottom);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  display: flex;
+  flex-direction: column;
 
   transition:
-    transform 0.7s cubic-bezier(0.62, 0.05, 0.01, 0.99),
+    transform 0.7s var(--primary-curve),
     opacity 0.3s ease;
 }
 
 .overlayHeader {
-  color: #fff;
+  color: var(--white);
   display: flex;
   justify-content: space-between;
   opacity: 0;
   padding: 20px;
-  position: absolute;
-  top: 0;
   transition: opacity 0.4s ease;
   width: inherit;
 }
@@ -60,19 +57,21 @@
 .closeButton {
   background: none;
   border: none;
-  color: #fff;
+  color: var(--white);
   font-size: 1.3rem;
+  cursor: pointer;
 }
 
 .overlayContent {
   align-items: flex-start;
   display: flex;
   flex-direction: column;
-  height: -webkit-fill-available;
+  flex: 1;
   justify-content: flex-end;
   opacity: 0;
-  padding: 20px;
+  padding: 0 20px 20px 20px;
   transition: opacity 0.8s ease;
+  margin-top: 40px;
 }
 
 .overlay.open {
@@ -112,18 +111,20 @@
 }
 
 .menuList li a {
-  color: #fff;
+  color: var(--white);
   font-size: 4rem;
   text-decoration: none;
 }
 
 .menuList li .active {
-  text-decoration: underline;
-  text-underline-offset: 12px;
+  color: var(--light-yellow);
+  /* text-decoration: underline; */
+  /* text-underline-offset: 12px; */
 }
 
 .overlayContent p {
   margin-top: 0;
+  color: var(--white);
 }
 
 .overlayContent p:last-child {

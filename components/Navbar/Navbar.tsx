@@ -7,7 +7,7 @@ import Link from "next/link";
 
 export default function Navbar() {
   const pathname = usePathname();
-  
+
   const [open, setOpen] = useState(false);
   const [fadeOut, setFadeOut] = useState(false);
 
@@ -30,6 +30,14 @@ export default function Navbar() {
     return () => window.removeEventListener("force-close-menu", handler);
   }, []);
 
+  useEffect(() => {
+    if (open) {
+      document.body.classList.add("menu-open");
+    } else {
+      document.body.classList.remove("menu-open");
+    }
+  }, [open]);
+  
   return (
     <nav className={styles.navbar}>
       <div className={styles.navHeader}>
@@ -69,8 +77,8 @@ export default function Navbar() {
             <li><Link className={pathname === "/projects" ? styles.active : ""} href="/projects">Projects</Link></li>
             <li><Link className={pathname === "/contact" ? styles.active : ""} href="/contact">Contact</Link></li>
           </ul>
-          <p>Frontend Developer <br/>at Bolser</p>
-          <p>Currenly based in <br/>Chennai, India</p>
+          <p>Frontend Developer <br />at Bolser</p>
+          <p>Currenly based in <br />Chennai, India</p>
         </div>
       </div>
     </nav>
