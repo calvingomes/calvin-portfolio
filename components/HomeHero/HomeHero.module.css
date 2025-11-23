@@ -14,12 +14,40 @@
   display: none;
 }
 
+.heroPicMobileWrapper {
+  position: relative;
+  width: 360px;
+  height: 290px;
+  margin-bottom: 20px;
+  -webkit-mask-image: url("/images/masks/hero-mobile-mask.svg");
+  mask-image: url("/images/masks/hero-mobile-mask.svg");
+  mask-size: cover;
+  mask-repeat: no-repeat;
+  z-index: 0;
+  isolation: isolate;
+}
+
+.heroPicDesktopWrapper {
+  display: none;
+  position: relative;
+  width: 800px;
+  height: 350px;
+  -webkit-mask-image: url("/images/masks/hero-desktop-mask.svg");
+  mask-image: url("/images/masks/hero-desktop-mask.svg");
+  mask-size: cover;
+  mask-repeat: no-repeat;
+  z-index: 0;
+  isolation: isolate;
+}
+
 .heroPicMobile {
-  margin: 0 0 20px 0;
+  object-fit: cover;
+  object-position: 60% center;
 }
 
 .heroPicDesktop {
-  display: none;
+  object-fit: cover;
+  object-position: 60% center;
 }
 
 .heroNameContainer {
@@ -48,6 +76,7 @@
 @media screen and (min-width: 1400px) {
 
   .homeHero {
+    margin-top: 20px;
     margin-bottom: 200px;
   }
 
@@ -70,13 +99,12 @@
     justify-content: space-between;
   }
 
-  .heroPicMobile {
+  .heroPicMobileWrapper {
     display: none;
   }
 
-  .heroPicDesktop {
+  .heroPicDesktopWrapper {
     display: block;
-    margin: 0;
   }
 
   .heroTitle,
