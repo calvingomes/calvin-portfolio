@@ -14,6 +14,7 @@ export default function HomeHero() {
           fill
           className={styles.heroPicMobile}
           sizes="360px"
+          loading="eager"
         />
       </div>
 
@@ -24,6 +25,7 @@ export default function HomeHero() {
           fill
           className={styles.heroPicDesktop}
           sizes="800px"
+          loading="eager"
         />
       </div>
 
