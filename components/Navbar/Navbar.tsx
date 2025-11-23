@@ -70,7 +70,7 @@ export default function Navbar() {
             <li><Link className={pathname === "/contact" ? styles.active : ""} href="/contact">Contact</Link></li>
           </ul>
           <p>Frontend Developer <br/>at Bolser</p>
-          <p>Currenly based at <br/>Chennai, India</p>
+          <p>Currenly based in <br/>Chennai, India</p>
         </div>
       </div>
     </nav>
