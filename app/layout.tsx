@@ -20,6 +20,12 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Calvin Gomes",
   description: "Portfolio",
+
+  themeColor: "#e1dfdd",
+
+  appleWebApp: {
+    statusBarStyle: "black-translucent",
+  },
 };
 
 export default function RootLayout({

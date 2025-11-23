@@ -38,6 +38,10 @@
   --font-mono: var(--font-geist-mono);
 }
 
+html {
+  background: var(--light-grey);
+}
+
 body {
   background: var(--light-grey);
   color: var(--black);
